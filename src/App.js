@@ -3,7 +3,7 @@ import axios from 'axios';
 
 
 function App() {
-  const newUrl = 'https://api.lyrics.ovh/v1/father john misty/only son of the ladies man';
+  const newUrl = 'https://api.lyrics.ovh/v1/father john misty/Hollywood Forever Cemetery Sings';
   axios({
     url: newUrl,
     method: 'GET',
@@ -25,6 +25,15 @@ function App() {
           </div>
         </div>
       </header>
+      <section className='wrapper'>
+        <form>
+          <label>Artist Name:</label>
+          <input type='text'/>
+          <label>Song Name:</label>
+          <input type='text'/>
+          <button>Are those Vocals Ready!</button>
+        </form>
+      </section>
     </div>
   );
 }

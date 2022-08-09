@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #667497;
+  background-color: cadetblue;
 }
 
 code {
@@ -26,27 +26,60 @@ html {
   font-size: 125%;
 }
 .wrapper {
-  max-width: 1700px;
-  width: 90%;
+  max-width: 1600px;
+  width: 80%;
   margin: 0 auto;
 }
-header{
-  background-color: #667497;
+h1, .title {
+  font-family: 'Monoton', cursive;
+  text-shadow: 2px 2px crimson, 5px 5px cadetblue, 10px 10px #333, 12px 12px goldenrod;
+}
+header {
   padding: 40px 0;
 }
 h1 {
   font-size: 3rem;
-  font-family: 'Monoton', cursive;
-  text-shadow: 2px 2px crimson, 5px 5px cadetblue, 10px 10px #333;
+  text-shadow: 2px 2px crimson, 5px 5px cadetblue, 10px 10px #333, 12px 12px goldenrod;
   margin: 0;
   letter-spacing: 0.4rem;
 }
 .title {
   font-size: 4rem;
-  font-family: 'Monoton', cursive;
-  text-shadow: 2px 2px crimson, 5px 5px cadetblue, 10px 10px #333;
+  text-shadow: 2px 2px crimson, 5px 5px cadetblue, 10px 10px #333, 12px 12px goldenrod;
   letter-spacing: 0.4rem;
 }
 .title span {
   display: inline;
+}
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  font-family: 'Monoton', cursive;
+  color: goldenrod;
+  align-items: center;
+  font-size: 1.4rem;
+}
+input {
+  padding: 10px 15px 10px 15px;
+  border: 2px solid goldenrod;
+  background-color: whitesmoke;
+}
+
+button {
+  padding: 10px 15px 10px 15px;
+  font-family: 'Monoton', cursive;
+  border: 2px solid goldenrod;
+  background-color: whitesmoke;
+  transition: 0.4s;
+  margin: 20px;
+}
+button:hover {
+  border: 2px solid whitesmoke;
+  color: cadetblue;
+  background-color: goldenrod;
+}
+img {
+  max-width: 100%;
+  display: inline-block;
 }
