@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Header from './Header';
 import Form from './Form';
 import Displaylyrics from './Displaylyrics';
+import DisplayArtist from './DisplayArtist';
 
 
 
@@ -57,8 +58,10 @@ function App() {
         artistInput={artistInput}
         songInput={songInput}
       />
+      <DisplayArtist 
+        artist={artistInput}
+      />
       <Displaylyrics  
-        artist={setArtistInput}
         lyrics={lyrics}
       />
     </div>
