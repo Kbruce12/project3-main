@@ -1,4 +1,4 @@
-function DisplayArtist(props) {
+function DisplayArtist (props) {
     return (    
         <div className="display-artist">
             <h3 className="artist">{props.artistInput}</h3>

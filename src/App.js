@@ -4,6 +4,8 @@ import Header from './Header';
 import Form from './Form';
 import Displaylyrics from './Displaylyrics';
 import DisplayArtist from './DisplayArtist';
+import Footer from './Footer';
+
 
 
 
@@ -11,6 +13,8 @@ function App() {
   const [lyrics, setLyrics] = useState('');
   const [artistInput, setArtistInput] = useState('');
   const [songInput, setSongInput] = useState('');
+  const [formError, setFormError] = useState('');
+
   
   
   const newUrl = `https://api.lyrics.ovh/v1/${artistInput}/${songInput}`;
@@ -26,22 +30,27 @@ function App() {
       const apiData =  response;
 
       setLyrics(apiData.data.lyrics)
+      setFormError(false);
     } catch (error) {
-      // setFormError(true);
+      setFormError(true);
     }
    }
    
    const handleSubmit = (e) => {
     e.preventDefault();
     getLyrics();
+    setSongInput('');
+    setArtistInput('');
    }
    
   const handleArtistChange = (e) => {
     setArtistInput(e.target.value);
   }
+
   const handleSongChange = (e) => {
     setSongInput(e.target.value);
   }
+
    
 
 
@@ -51,19 +60,23 @@ function App() {
   return (
     <div>
       <Header />
-      <Form 
-        handleSubmit={handleSubmit}
-        handleArtistChange={handleArtistChange}
-        handleSongChange={handleSongChange}
-        artistInput={artistInput}
-        songInput={songInput}
-      />
-      <DisplayArtist 
-        artist={artistInput}
-      />
-      <Displaylyrics  
-        lyrics={lyrics}
-      />
+      <main>
+        <Form 
+          handleSubmit={handleSubmit}
+          handleArtistChange={handleArtistChange}
+          handleSongChange={handleSongChange}
+          artistInput={artistInput}
+          songInput={songInput}
+          formError={formError}
+        />
+        <DisplayArtist 
+          artist={artistInput}
+        />
+        <Displaylyrics  
+          lyrics={lyrics}
+        />
+      </main>
+      <Footer />
     </div>
   );
 }

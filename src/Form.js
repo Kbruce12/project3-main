@@ -1,4 +1,5 @@
 function Form (props) {
+
     return (
         <section className='wrapper'>
             <form>
@@ -7,6 +8,10 @@ function Form (props) {
                 <label htmlFor="song">Song Name:</label>
                 <input type='text' id="song" onChange={props.handleSongChange} value={props.songInput}/>
                 <button onClick={props.handleSubmit}>Are those Vocals Ready!</button>
+                {props.formError ? <div className="error">
+                                        <p>Opps we couldn't find those lyrics!!</p>
+                                        <p>Try someone less obscure hipster</p>
+                                    </div> : null}
             </form>
       </section>
     ) 
