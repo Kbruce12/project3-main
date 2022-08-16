@@ -161,6 +161,7 @@ footer p {
   position: absolute;
   top: 23%;
   right: 45%;
+  margin: 15px 0 15px 0;
   animation: loading-screen infinite 10s linear;  
 }
 
@@ -229,5 +230,8 @@ footer p {
   .loading-image {
     top: 10%;
     right: 10%;
+  }
+  .error {
+    padding: 0;
   }
 }
