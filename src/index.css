@@ -179,13 +179,16 @@ footer p {
     justify-content: center;
     flex-direction: column;
   }
+  .loading-image {
+    right: 36%;
+  }
+  label {
+    margin-top: 10px;
+  }
 }
 @media (max-width: 1200px) {
   .lyric-sheet p {
     padding: 0 60px 0 60px;
-  }
-  .loading-image {
-    right: 36%;
   }
 }
 @media (max-width: 800px) {
