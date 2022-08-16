@@ -9,9 +9,9 @@ function Form (props) {
                     <input type='text' id="song" onChange={props.handleSongChange} value={props.songInput}/>
                     <button onClick={props.handleSubmit}>Are those Vocals Ready!</button>
                     {props.formError ? <div className="error">
-                                            <p>Opps we couldn't find those lyrics!!</p>
+                                            <p>Oops we couldn't find those lyrics!!</p>
                                             <p>Check your spelling or Try someone less obscure hipster</p>
-                                        </div> : null}
+                                        </div> : null }
                 </form>
             </section>
     ) 

@@ -3,7 +3,7 @@ function Displaylyrics (props) {
         props.lyrics ? (
         <section className="wrapper lyrics">
             <div className="lyric-sheet">
-               <p>{props.lyrics}</p>
+                <p>{props.lyrics}</p>
             </div>
         </section>
         ) : null
