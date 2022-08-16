@@ -3,8 +3,9 @@ import { useState } from 'react';
 import Header from './Header';
 import Form from './Form';
 import Displaylyrics from './Displaylyrics';
-import DisplayArtist from './DisplayArtist';
+import DisplaySongInfo from './DisplaySongInfo';
 import Footer from './Footer';
+import LoadingScreen from './LoadingScreen';
 
 
 
@@ -14,6 +15,7 @@ function App() {
   const [artistInput, setArtistInput] = useState('');
   const [songInput, setSongInput] = useState('');
   const [formError, setFormError] = useState('');
+  const [loadingScreen, setLoadingScreen] = useState(false);
 
   
   
@@ -29,6 +31,7 @@ function App() {
       const response = await axios(newUrl);
       const apiData =  response;
 
+      setLoadingScreen(true); 
       setLyrics(apiData.data.lyrics)
       setFormError(false);
     } catch (error) {
@@ -68,13 +71,15 @@ function App() {
           artistInput={artistInput}
           songInput={songInput}
           formError={formError}
-        />
-        <DisplayArtist 
-          artist={artistInput}
-        />
-        <Displaylyrics  
-          lyrics={lyrics}
-        />
+          />
+        {
+          loadingScreen ?
+          <Displaylyrics  
+            lyrics={lyrics}
+            song={songInput}
+            artisit={artistInput}
+          /> : <LoadingScreen />
+        }  
       </main>
       <Footer />
     </div>
