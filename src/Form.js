@@ -10,7 +10,7 @@ function Form (props) {
                     <button onClick={props.handleSubmit}>Are those Vocals Ready!</button>
                     {props.formError ? <div className="error">
                                             <p>Opps we couldn't find those lyrics!!</p>
-                                            <p>Try someone less obscure hipster</p>
+                                            <p>Check your spelling or Try someone less obscure hipster</p>
                                         </div> : null}
                 </form>
             </section>
