@@ -3,7 +3,6 @@ import { useState } from 'react';
 import Header from './Header';
 import Form from './Form';
 import Displaylyrics from './Displaylyrics';
-import DisplaySongInfo from './DisplaySongInfo';
 import Footer from './Footer';
 import LoadingScreen from './LoadingScreen';
 
