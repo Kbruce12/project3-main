@@ -211,6 +211,7 @@ footer p {
   }
   input {
     padding: 0;
+    width: 80%;
   }
   .lyric-sheet {
     max-width: none;
@@ -233,5 +234,8 @@ footer p {
   }
   .error {
     padding: 0;
+  }
+  .error p {
+    font-size: 0.8rem;
   }
 }
