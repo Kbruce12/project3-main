@@ -5,6 +5,7 @@ import Form from './Form';
 import Displaylyrics from './Displaylyrics';
 import Footer from './Footer';
 import LoadingScreen from './LoadingScreen';
+import DisplaySongInfo from './DisplaySongInfo';
 
 
 
@@ -56,6 +57,7 @@ function App() {
   }
 
 
+
    
 
 
@@ -76,8 +78,10 @@ function App() {
           />
         {
           loadingScreen ?
-          <Displaylyrics  
+          <Displaylyrics 
             lyrics={lyrics}
+            songInput={songInput}
+            artistInput={artistInput}
           /> : <LoadingScreen />
         }
 
