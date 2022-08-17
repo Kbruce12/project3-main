@@ -5,42 +5,21 @@ import Form from './Form';
 import Displaylyrics from './Displaylyrics';
 import Footer from './Footer';
 import LoadingScreen from './LoadingScreen';
-// import firebase from './firebase';
-// import { getDatabase, ref, onValue, push, remove } from 'firebase/database';
+
 
 
 
 function App() {
+  // create state for all items needed in app
   const [lyrics, setLyrics] = useState('');
   const [artistInput, setArtistInput] = useState('');
   const [songInput, setSongInput] = useState('');
   const [formError, setFormError] = useState('');
   const [loadingScreen, setLoadingScreen] = useState(false);
  
-  // const [songs, setSongs] = useState([]);
-  // const [artist, setArtist] = useState([]);
-
-  // useEffect(() =>{
-
-  //   const database = getDatabase(firebase)
-
-  //   const dbRef = ref(database)
-
-  //   onValue(dbRef, (response) => {
-      
-      
-      
-      
-      
-  //     const newState = [];
-  //     const data response.val();
-
-  //     for ()
-  //   })
-  // })
 
   
-  
+  // Make an axios call once form has been submitted
   const newUrl = `https://api.lyrics.ovh/v1/${artistInput}/${songInput}`;
   
    const getLyrics = async () => {
@@ -60,21 +39,22 @@ function App() {
       setFormError(true);
     }
    }
-   
+   // Function to handle submit
    const handleSubmit = (e) => {
     e.preventDefault();
     getLyrics();
-    setSongInput('');
-    setArtistInput('');
+    // setSongInput('');
+    // setArtistInput('');
    }
-   
+  // holds artist input value 
   const handleArtistChange = (e) => {
     setArtistInput(e.target.value);
   }
-
+  // holds song input value
   const handleSongChange = (e) => {
     setSongInput(e.target.value);
   }
+
 
    
 

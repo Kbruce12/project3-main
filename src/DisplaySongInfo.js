@@ -1,8 +1,9 @@
-function DisplaySongInfo (props) {
+
+function DisplaySongInfo ({artistInput, songInput}) {
     return (    
         <div className="display-artist">
-            <h3 className="artist">{props.artistInput}</h3>
-            <p className="song">{props.songInput}</p>
+            <h3 className="artist">{songInput}</h3>
+            <h3 className="song">{artistInput}</h3>
         </div>
     )
 }

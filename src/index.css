@@ -42,6 +42,9 @@ h1, .title, h3 {
 h2 {
   font-size: 3.5rem;
 }
+h3 {
+  
+}
 header {
   padding: 40px 0;
 }
@@ -109,7 +112,7 @@ button {
   width: 100%;
   margin-top: 20px;
 }
-button:hover {
+button:hover, :focus {
   border: 2px solid whitesmoke;
   color: cadetblue;
   background-color: goldenrod;
@@ -165,6 +168,9 @@ footer p {
   font-family: 'Monoton', cursive;
   color: black;
 }
+a {
+  text-decoration: none;
+}
 
 
 .loading {
@@ -172,6 +178,9 @@ footer p {
   opacity: 0.6;
   width: 100%;
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .loading-image {
   background-image: url(../public/1200px-12in-Vinyl-LP-Record-Angle.jpg);
@@ -180,9 +189,6 @@ footer p {
   border-radius: 50%;
   width: 300px;
   height: 300px;
-  position: absolute;
-  top: 23%;
-  right: 45%;
   margin: 15px 0 15px 0;
   animation: loading-screen infinite 20s linear;  
 }
@@ -207,9 +213,6 @@ footer p {
   form {
     justify-content: center;
     flex-direction: column;
-  }
-  .loading-image {
-    right: 36%;
   }
   label {
     margin-top: 10px;
@@ -256,10 +259,6 @@ footer p {
     text-align: center;
     letter-spacing: 0.6rem;
     padding: 0;
-  }
-  .loading-image {
-    top: 10%;
-    right: 4%;
   }
   .error {
     padding: 0;
