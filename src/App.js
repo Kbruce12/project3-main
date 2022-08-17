@@ -56,6 +56,7 @@ function App() {
   }
 
 
+
    
 
 
@@ -76,8 +77,10 @@ function App() {
           />
         {
           loadingScreen ?
-          <Displaylyrics  
+          <Displaylyrics 
             lyrics={lyrics}
+            songInput={songInput}
+            artistInput={artistInput}
           /> : <LoadingScreen />
         }
 

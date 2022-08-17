@@ -3,9 +3,8 @@ function Displaylyrics ({lyrics, songInput, artistInput}) {
         lyrics ? (
         <section className="wrapper lyrics">
             <div className="lyric-sheet">
-                <h3 className="artist">{songInput}</h3>
                 <p>{lyrics}</p>
-                <h3 className="song">{artistInput}</h3>
+                <h3 className="song">{songInput} by {artistInput}</h3>
             </div>
         </section>
         ) : null
