@@ -29,14 +29,15 @@ function App() {
         dataType: 'JSON'
     }); 
     try {
+      setLoadingScreen(true); 
       const response = await axios(newUrl);
       const apiData =  response;
 
-      setLoadingScreen(true); 
       setLyrics(apiData.data.lyrics)
       setFormError(false);
     } catch (error) {
       setFormError(true);
+      setLoadingScreen(false)
     }
    }
    // Function to handle submit
@@ -76,7 +77,7 @@ function App() {
           formError={formError}
           />
         {
-          loadingScreen ?
+          !loadingScreen ?
           <Displaylyrics 
             lyrics={lyrics}
             songInput={songInput}
