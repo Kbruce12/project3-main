@@ -208,8 +208,8 @@ a {
 }
 @media (max-width:1800px) {
   form {
-    flex-wrap: wrap;
-    flex-direction: column;
+    /* flex-direction: column; */
+    justify-content: center;
   }
 }
 @media (max-width: 1425px) {
@@ -219,9 +219,6 @@ a {
   }
   label {
     margin-top: 10px;
-  }
-  button {
-    width: 30%;
   }
 }
 @media (max-width: 1200px) {
@@ -271,5 +268,8 @@ a {
   }
   .error p {
     font-size: 0.8rem;
+  }
+  button {
+    width: 80%;
   }
 }
