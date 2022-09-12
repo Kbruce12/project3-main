@@ -209,6 +209,7 @@ a {
 @media (max-width:1800px) {
   form {
     flex-wrap: wrap;
+    flex-direction: column;
   }
 }
 @media (max-width: 1425px) {
