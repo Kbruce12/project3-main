@@ -208,7 +208,6 @@ a {
 }
 @media (max-width:1820px) {
   form {
-    justify-content: center;
     flex-wrap: wrap;
   }
 }
