@@ -206,9 +206,10 @@ a {
     visibility: hidden;
   }
 }
-@media (max-width:1800px) {
+@media (max-width:1820px) {
   form {
     justify-content: center;
+    flex-wrap: wrap;
   }
 }
 @media (max-width: 1425px) {
