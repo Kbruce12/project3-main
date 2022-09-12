@@ -207,8 +207,8 @@ a {
   }
 }
 @media (max-width:1800px) {
-  input{
-    font-size: 62%;
+  form {
+    flex-wrap: wrap;
   }
 }
 @media (max-width: 1425px) {
@@ -218,6 +218,9 @@ a {
   }
   label {
     margin-top: 10px;
+  }
+  button {
+    width: 30%;
   }
 }
 @media (max-width: 1200px) {
