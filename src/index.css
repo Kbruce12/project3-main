@@ -208,7 +208,6 @@ a {
 }
 @media (max-width:1800px) {
   form {
-    /* flex-direction: column; */
     justify-content: center;
   }
 }
