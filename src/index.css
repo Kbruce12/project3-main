@@ -206,6 +206,11 @@ a {
     visibility: hidden;
   }
 }
+@media (max-width:1800px) {
+  input{
+    font-size: 62%;
+  }
+}
 @media (max-width: 1425px) {
   form {
     justify-content: center;
